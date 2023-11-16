@@ -2,7 +2,7 @@
 
 //include koneksi database
 include('koneksi.php');
-require('tester.php');
+require('polyalpha.php');
 $key = "KEY";
 //get data dari form
 $nid    = random_int(1000,10000);

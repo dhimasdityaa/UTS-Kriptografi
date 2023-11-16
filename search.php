@@ -20,7 +20,7 @@
             </form>
             <?php
                 include "koneksi.php";
-                require('tester.php');
+                require('polyalpha.php');
                 //$key = "KEY";
                 $result['nid'] = '';
                 $result['nama'] = '';
