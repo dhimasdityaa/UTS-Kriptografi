@@ -8,7 +8,7 @@ $key = "KEY";
 $nid    = random_int(1000,10000);
 $nama   = vigenereEncrypt($_POST['nama'],$key);
 $email   = vigenereEncrypt($_POST['email'],$key);
-$nohp   = vigenereEncrypt($_POST['nohp'],$key);
+$nohp   = $_POST['nohp'];
 $alamat   = vigenereEncrypt($_POST['alamat'],$key);
 
 //$aNama = encrypt($nama);
@@ -19,8 +19,18 @@ $query = "INSERT INTO nasabah (nid, nama, email, nohp, alamat) VALUES ('$nid','$
 //kondisi pengecekan apakah data berhasil dimasukkan atau tidak
 if($connection->query($query)) {
 
-    //redirect ke halaman index.php 
+    //redirect ke halaman index.php
+    ?>
+    <script>
+        Swal.fire({
+            title: "The Internet?",
+            text: "That thing is still around?",
+            icon: "success"
+        });
+    </script>
+    <?php
     header("location: index.php");
+    
 
 } else {
 

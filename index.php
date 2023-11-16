@@ -1,38 +1,72 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Bootstrap demo</title>
-        <link href="style.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css"/>
-    </head>
-    <body>
-        <div class="container topside">
-            <h1 class="center">FORM INPUT NASABAH PERBANKAN</h1>
-            <form action="proses.php" method="POST">
-                <div class="mb-3">
-                    <label class="form-label">Nama Lengkap</label>
-                    <input type="text" class="form-control" name="nama" placeholder="Masukan Nama Lengkap">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Email</label>
-                    <input type="email" class="form-control" name="email" placeholder="Masukan Email">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">No Handphone</label>
-                    <input type="text" class="form-control" name="nohp" placeholder="Masukan No Handphone">
-                </div>
-                <div class="mb-3">
-                    <label class="form-label">Alamat</label>
-                    <input type="text" class="form-control" name="alamat" placeholder="Masukan Alamat">
-                </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
-                <a href="search.php" class="btn btn-primary">Cari Data</a>
-            </form>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <!-- Memasukkan library Bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h1 style = "text-align:center;">FORM PENDAFTARAN NASABAH</h1>
+        <div  class="card">
+            <div style="padding-bottom:20px;" class="card-header">
+                <h5>Petunjuk Pengisian Form</h5>
+            </div>
+            <div class="card-body">
+                <p>
+                    1. Isi semua form sesuai dengan yang diminta.
+                </p>
+                <p>
+                    2. Pastikan data yang sesuai dengan data diri anda.
+                </p>
+                <p>
+                    3. Setelah semua terisi silahkan tekan "Daftar" untuk mendaftarakan diri.
+                </p>
+                <p>
+                    4. Untuk mencari data tekan "Cari Data".
+                </p>
         </div>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
-    </body>
+        <form action="proses.php" method="post">
+            <div class="form-group">
+                <label for="nama">Nama:</label>
+                <input type="text" class="form-control" id="nama" name="nama" required>
+                <small id="namaHelp" class="form-text text-muted">Masukkan nama lengkap Anda.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+                <small id="emailHelp" class="form-text text-muted">Masukkan alamat email yang valid.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="nohp">No Handphone</label>
+                <input type="nohp" class="form-control" id="nohp" name="nohp" required>
+                <small id="nohpHelp" class="form-text text-muted">Masukkan Nomor Handphone yang dapat dihubungi.</small>
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <input type="alamat" class="form-control" id="alamat" name="alamat" required>
+                <small id="alamatHelp" class="form-text text-muted">Masukan alamat sesuai dengan tempat tinggal.</small>
+            </div>
+
+            
+
+            <button type="submit" class="btn btn-primary">Daftar</button>
+            <a href="search.php" class="btn btn-primary">Cari Data</a>
+        </form>
+    </div>
+
+    <!-- Memasukkan script JavaScript Bootstrap (opsional) -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+
+</body>
 </html>
