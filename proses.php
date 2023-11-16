@@ -6,10 +6,10 @@ require('polyalpha.php');
 $key = "KEY";
 //get data dari form
 $nid    = random_int(1000,10000);
-$nama   = vigenereEncrypt($_POST['nama'],$key);
-$email   = vigenereEncrypt($_POST['email'],$key);
+$nama   = Encrypt($_POST['nama'],$key);
+$email   = Encrypt($_POST['email'],$key);
 $nohp   = $_POST['nohp'];
-$alamat   = vigenereEncrypt($_POST['alamat'],$key);
+$alamat   = Encrypt($_POST['alamat'],$key);
 
 //$aNama = encrypt($nama);
 

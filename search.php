@@ -21,12 +21,7 @@
             <?php
                 include "koneksi.php";
                 require('polyalpha.php');
-                //$key = "KEY";
-                $result['nid'] = '';
-                $result['nama'] = '';
-                $result['email'] = '';
-                $result['nohp'] = '';
-                $result['alamat'] = '';
+                $key = "KEY";
                 if(isset($_GET['nid'])){
                     $nid = $_GET['nid'];
                     $query    =mysqli_query($connection,"SELECT * FROM nasabah WHERE nid='$nid'");
@@ -35,14 +30,14 @@
             ?>
             <div class="card">
                 <div class="card-header">
-                    Detail Mahasiswa
+                    Detail Nasabah
                 </div>
                 <div class="card-body">
-                    <h5 class="card-title"><?php echo $result['nid'];?></h5>
-                    <p class="card-text"><?php echo $result['nama'];?></p>
-                    <p class="card-text"><?php echo $result['email'];?></p>
-                    <p class="card-text"><?php echo $result['nohp'];?></p>
-                    <p class="card-text"><?php echo $result['alamat'];?></p>
+                    <h5 class="card-title"><?php echo Decrypt($result['nid'],$key);?></h5>
+                    <p class="card-text"><?php echo Decrypt($result['nama'],$key);?></p>
+                    <p class="card-text"><?php echo Decrypt($result['email'],$key);?></p>
+                    <p class="card-text"><?php echo Decrypt($result['nohp'],$key);?></p>
+                    <p class="card-text"><?php echo Decrypt($result['alamat'],$key);?></p>
                     <!-- Tambahkan informasi detail sesuai kebutuhan -->
                 </div>
             </div>

@@ -1,6 +1,6 @@
 <?php
 
-function vigenereEncrypt($plainText, $key) {
+function Encrypt($plainText, $key) {
     $result = "";
     $keyLength = strlen($key);
     $keyIndex = 0;
@@ -32,7 +32,7 @@ function vigenereEncrypt($plainText, $key) {
     return $result;
 }
 
-function vigenereDecrypt($cipherText, $key) {
+function Decrypt($cipherText, $key) {
     $result = "";
     $keyLength = strlen($key);
     $keyIndex = 0;
